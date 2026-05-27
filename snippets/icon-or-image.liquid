@@ -17,6 +17,7 @@
     width="{{ width }}"
     height="{{ width }}"
     viewBox="0 0 20 20"
+    {% if fill_color %}style="fill: {{ fill_color }}; color: {{ fill_color }};"{% endif %}
     {% if attributes %}
       {{ attributes }}
     {% endif %}

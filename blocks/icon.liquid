@@ -9,7 +9,8 @@
     image_upload: block_settings.image_upload,
     width: block_settings.width,
     class_name: icon_block_class,
-    attributes: block.shopify_attributes
+    attributes: block.shopify_attributes,
+    fill_color: block_settings.icon_color
   %}
 {% endcapture %}
 
@@ -36,6 +37,7 @@
   .icon-block__media {
     height: auto;
   }
+
 {% endstylesheet %}
 
 {% schema %}
@@ -301,6 +303,11 @@
       "step": 2,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Color"
     },
     {
       "type": "url",
