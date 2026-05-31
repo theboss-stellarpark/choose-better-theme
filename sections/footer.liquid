@@ -60,6 +60,16 @@
     font-weight: var(--font-heading--weight);
   }
 
+  @media screen and (max-width: 749px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+    .footer-content .group-block-content.layout-panel-flex--row {
+      flex-wrap: nowrap;
+      gap: 20px !important;
+    }
+  }
+
   @media screen and (min-width: 750px) and (max-width: 989px) {
     .footer-content {
       grid-template-columns: repeat(min(var(--grid-columns), 3), 1fr);

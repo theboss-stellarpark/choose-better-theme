@@ -17,10 +17,10 @@
         "col_brand": {
           "type": "group",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -57,34 +57,14 @@
               "type": "logo",
               "settings": {
                 "inverse": true,
+                "font": "heading",
                 "unit": "pixel",
+                "percent_width": 100,
                 "pixel_height": 32,
                 "custom_mobile_size": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "footer_tagline": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Different paths. Common ground.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "0.875rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -95,10 +75,10 @@
             "footer_social": {
               "type": "social-links",
               "settings": {
-                "instagram_url": "https://www.instagram.com/choosebetter.co/",
-                "tiktok_url": "https://www.tiktok.com/@choosebetter",
-                "youtube_url": "https://www.youtube.com/@choosebetter",
                 "facebook_url": "",
+                "instagram_url": "https://www.instagram.com/choosebetter.co/",
+                "youtube_url": "https://www.youtube.com/@choosebetter",
+                "tiktok_url": "https://www.tiktok.com/@choosebetter",
                 "twitter_url": "",
                 "threads_url": "",
                 "linkedin_url": "",
@@ -112,47 +92,12 @@
               "blocks": {}
             }
           },
-          "block_order": ["footer_logo", "footer_tagline", "footer_social"]
+          "block_order": [
+            "footer_logo",
+            "footer_social"
+          ]
         },
-        "col_shop": {
-          "type": "menu",
-          "settings": {
-            "menu": "footer-shop",
-            "heading": "SHOP",
-            "show_as_accordion": false,
-            "accordion_dividers": false,
-            "accordion_icon": "caret",
-            "heading_preset": "h6",
-            "menu_spacing": 8,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "col_company": {
-          "type": "menu",
-          "settings": {
-            "menu": "footer-company",
-            "heading": "COMPANY",
-            "show_as_accordion": false,
-            "accordion_dividers": false,
-            "accordion_icon": "caret",
-            "heading_preset": "h6",
-            "menu_spacing": 8,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "col_newsletter": {
+        "col_right": {
           "type": "group",
           "settings": {
             "content_direction": "column",
@@ -162,7 +107,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 12,
+            "gap": 32,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -191,6 +136,91 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "col_nav": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 48,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "col_shop": {
+                  "type": "menu",
+                  "settings": {
+                    "menu": "footer-shop",
+                    "heading": "SHOP",
+                    "menu_spacing": 8,
+                    "show_as_accordion": false,
+                    "accordion_icon": "caret",
+                    "accordion_dividers": false,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "heading_preset": "h6",
+                    "link_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "col_company": {
+                  "type": "menu",
+                  "settings": {
+                    "menu": "footer-company",
+                    "heading": "COMPANY",
+                    "menu_spacing": 8,
+                    "show_as_accordion": false,
+                    "accordion_icon": "caret",
+                    "accordion_dividers": false,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "heading_preset": "h6",
+                    "link_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "col_shop",
+                "col_company"
+              ]
+            },
             "newsletter_heading": {
               "type": "text",
               "settings": {
@@ -247,9 +277,9 @@
                 "width": "fill",
                 "custom_width": 100,
                 "inherit_color_scheme": true,
+                "color_scheme": "",
                 "heading": "",
                 "heading_preset": "h3",
-                "color_scheme": "",
                 "border_style": "all",
                 "border_width": 1,
                 "border_radius": 0,
@@ -267,10 +297,18 @@
               "blocks": {}
             }
           },
-          "block_order": ["newsletter_heading", "newsletter_desc", "newsletter_signup"]
+          "block_order": [
+            "col_nav",
+            "newsletter_heading",
+            "newsletter_desc",
+            "newsletter_signup"
+          ]
         }
       },
-      "block_order": ["col_brand", "col_shop", "col_company", "col_newsletter"],
+      "block_order": [
+        "col_brand",
+        "col_right"
+      ],
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
