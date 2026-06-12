@@ -1322,6 +1322,7 @@
             "photo_2": {
               "type": "image",
               "settings": {
+                "image": "shopify://shop_images/t-shirt_stack.png",
                 "link": "",
                 "image_ratio": "portrait",
                 "width": "fill",
