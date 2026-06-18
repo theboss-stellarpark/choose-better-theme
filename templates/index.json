@@ -1168,7 +1168,7 @@
               "type": "button",
               "settings": {
                 "label": "LEARN MORE",
-                "link": "/pages/our-story",
+                "link": "/pages/about-us",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -1181,7 +1181,7 @@
             "cb_watermark": {
               "type": "custom-liquid",
               "settings": {
-                "custom_liquid": "<style>.media-with-content__content{position:relative;overflow:hidden;isolation:isolate}.cb-watermark-wrapper{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}.cb-watermark{position:absolute;bottom:-0.1em;right:-0.05em;font-size:20rem;font-weight:800;color:rgba(28,42,57,0.05);line-height:1;font-family:var(--font-heading--family);letter-spacing:-0.02em;user-select:none;white-space:nowrap}</style><div class=\"cb-watermark-wrapper\"><div class=\"cb-watermark\" aria-hidden=\"true\">CB</div></div>"
+                "custom_liquid": "<style>.media-with-content__content{position:relative;overflow:hidden;isolation:isolate}.cb-watermark-wrapper{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}.cb-watermark-img{position:absolute;right:36%;top:50%;transform:translateY(-50%);width:420px;height:420px;object-fit:contain;opacity:0.08;}</style><div class=\"cb-watermark-wrapper\"><img class=\"cb-watermark-img\" src=\"https://cdn.shopify.com/s/files/1/0707/5384/5357/files/CHOOSE_BETTER_-_ROUND_CB_LOGO_GOLD_bbbca301-6aa9-4bb6-87a3-564a5eaaca70.png?v=1781320583\" alt=\"\" aria-hidden=\"true\"></div>"
               },
               "blocks": {}
             }
@@ -1344,6 +1344,7 @@
             "photo_3": {
               "type": "image",
               "settings": {
+                "image": "shopify://shop_images/neck_label.png",
                 "link": "",
                 "image_ratio": "portrait",
                 "width": "fill",
