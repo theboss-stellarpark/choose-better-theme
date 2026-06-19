@@ -975,15 +975,8 @@
                       },
                       "blocks": {}
                     },
-                    "fwd_mark": {
-                      "type": "custom-liquid",
-                      "settings": {
-                        "custom_liquid": "<div style=\"display:flex;align-items:center;gap:8px;margin-block-start:8px;\"><span style=\"width:40px;height:1px;background:#c2a35d;display:inline-block;\"></span><span style=\"color:#c2a35d;font-size:1.5rem;line-height:1;\">&#9733;</span><span style=\"width:40px;height:1px;background:#c2a35d;display:inline-block;\"></span></div>"
-                      },
-                      "blocks": {}
-                    }
                   },
-                  "block_order": ["fwd_heading", "fwd_mark"]
+                  "block_order": ["fwd_heading"]
                 },
                 "fwd_right": {
                   "type": "group",

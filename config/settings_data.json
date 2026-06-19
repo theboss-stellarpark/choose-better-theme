@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/CHOOSE_BETTER_-_LOGO_WIDE_WHITE_1a279f86-6e45-4463-bee5-396ec896efb0.png",
-    "logo_height": 48,
-    "logo_height_mobile": 36,
+    "logo": "shopify://shop_images/CHOOSE_BETTER_-_LOGO_WIDE_GOLD.png",
+    "logo_height": 24,
+    "logo_height_mobile": 18,
     "favicon": "shopify://shop_images/CHOOSE_BETTER_-_ROUND_CB_LOGO_GOLD.png",
     "type_body_font": "poppins_n4",
     "type_subheading_font": "poppins_n6",
