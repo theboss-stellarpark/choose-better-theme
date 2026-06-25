@@ -302,6 +302,14 @@
         "padding-block-end": 0
       }
     },
+    "design_story": {
+      "type": "product-design-story",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
     "product_recommendations_qggXJq": {
       "type": "product-recommendations",
       "blocks": {
@@ -446,6 +454,7 @@
   },
   "order": [
     "main",
+    "design_story",
     "product_recommendations_qggXJq"
   ]
 }

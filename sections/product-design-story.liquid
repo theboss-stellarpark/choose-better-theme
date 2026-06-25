@@ -1,0 +1,112 @@
+{% liquid
+  assign design_handle = product.metafields.custom.design_story.value
+  if design_handle != blank
+    assign article_path = 'our-designs/' | append: design_handle
+    assign story = articles[article_path]
+  endif
+%}
+
+{% if story != blank %}
+  <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
+  <div
+    class="design-story section section--page-width color-{{ section.settings.color_scheme }} spacing-style"
+    style="--padding-block-start: {{ section.settings['padding-block-start'] }}px; --padding-block-end: {{ section.settings['padding-block-end'] }}px;"
+  >
+    {% if story.image %}
+      <div class="design-story__hero">
+        <img
+          src="{{ story.image | image_url: width: 1400 }}"
+          alt="{{ story.image.alt | escape }}"
+          width="{{ story.image.width }}"
+          height="{{ story.image.height }}"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+    <div class="design-story__body rte">
+      <h2 class="design-story__title">{{ story.title }}</h2>
+      {{ story.content }}
+    </div>
+
+    <a href="{{ story.url }}" class="design-story__link link">
+      Read the full story →
+    </a>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .design-story__hero {
+    width: 100%;
+    margin-block-end: 40px;
+  }
+
+  .design-story__hero img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .design-story__title {
+    font-family: var(--font-heading--family);
+    margin-block-end: 24px;
+  }
+
+  .design-story__body {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .design-story__body img {
+    max-width: 100%;
+    height: auto;
+    margin-block: 24px;
+  }
+
+  .design-story__link {
+    display: block;
+    text-align: center;
+    margin-block-start: 40px;
+    font-family: var(--font-subheading--family);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Design Story",
+  "templates": ["product"],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    }
+  ]
+}
+{% endschema %}
