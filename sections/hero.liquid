@@ -655,6 +655,18 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(var(--hero-media-count-mobile, 1), calc(100% / var(--hero-media-count-mobile, 1)));
     }
+
+    .hero__media {
+      object-position: right center;
+    }
+
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero__content-wrapper .text-block:not([style*="c2a35d"]) *,
+    .hero__content-wrapper .text-block:not([style*="c2a35d"]) {
+      color: #ffffff !important;
+    }
   }
 
   .hero__link {
