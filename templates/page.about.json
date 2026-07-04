@@ -95,7 +95,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/about_us_second_block.png",
+            "image": "shopify://shop_images/hardcover-bound-notebook-navy-front-6a403497d5745.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -676,7 +676,7 @@
                 "img_premium": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/about_us_design_image_1.png",
+                    "image": "shopify://shop_images/navy_fabric_clean.png",
                     "link": "", "image_ratio": "landscape", "width": "fill", "custom_width": 100,
                     "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
                     "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
@@ -729,7 +729,7 @@
                 "img_design": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/about_us_design_image_2.png",
+                    "image": "shopify://shop_images/CB_Embroidered_Logo_Updated.jpg",
                     "link": "", "image_ratio": "landscape", "width": "fill", "custom_width": 100,
                     "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
                     "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,

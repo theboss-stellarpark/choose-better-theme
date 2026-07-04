@@ -13,40 +13,50 @@
     class="design-story section section--page-width color-{{ section.settings.color_scheme }} spacing-style"
     style="--padding-block-start: {{ section.settings['padding-block-start'] }}px; --padding-block-end: {{ section.settings['padding-block-end'] }}px;"
   >
-    {% if story.image %}
-      <div class="design-story__hero">
-        <img
-          src="{{ story.image | image_url: width: 1400 }}"
-          alt="{{ story.image.alt | escape }}"
-          width="{{ story.image.width }}"
-          height="{{ story.image.height }}"
-          loading="lazy"
-        >
+    <div class="design-story__layout">
+      <div class="design-story__text">
+        <h2 class="design-story__title">{{ story.title }}</h2>
+        <div class="design-story__body rte">{{ story.content }}</div>
       </div>
-    {% endif %}
 
-    <div class="design-story__body rte">
-      <h2 class="design-story__title">{{ story.title }}</h2>
-      {{ story.content }}
+      {% if story.image %}
+        <div class="design-story__image">
+          <img
+            src="{{ story.image | image_url: width: 800 }}"
+            alt="{{ story.image.alt | escape }}"
+            width="{{ story.image.width }}"
+            height="{{ story.image.height }}"
+            loading="lazy"
+          >
+        </div>
+      {% endif %}
     </div>
-
-    <a href="{{ story.url }}" class="design-story__link link">
-      Read the full story →
-    </a>
   </div>
 {% endif %}
 
 {% stylesheet %}
-  .design-story__hero {
-    width: 100%;
-    margin-block-end: 40px;
+  .design-story__layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
   }
 
-  .design-story__hero img {
+  .design-story__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .design-story__image {
+    width: 38%;
+    flex-shrink: 0;
+  }
+
+  .design-story__image img {
     width: 100%;
-    max-height: 360px;
-    object-fit: cover;
+    height: auto;
     display: block;
+    border-radius: 4px;
   }
 
   .design-story__title {
@@ -55,8 +65,7 @@
   }
 
   .design-story__body {
-    max-width: 800px;
-    margin-inline: auto;
+    margin-block-end: 32px;
   }
 
   .design-story__body img {
@@ -66,13 +75,21 @@
   }
 
   .design-story__link {
-    display: block;
-    text-align: center;
-    margin-block-start: 40px;
+    display: inline-block;
     font-family: var(--font-subheading--family);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 0.875rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    .design-story__layout {
+      flex-direction: column;
+    }
+
+    .design-story__image {
+      width: 100%;
+    }
   }
 {% endstylesheet %}
 

@@ -1113,6 +1113,12 @@
     font-family: var(--menu-localization-font);
     font-size: var(--menu-localization-font-size);
   }
+
+  /* sticky='always' uses top:-1px for intersection observer tracking but it creates
+     a visible 1px gap at scroll position 0; override to 0 for always-sticky mode only */
+  .header-section:has(> #header-component[sticky='always']) {
+    top: 0;
+  }
 {% endstylesheet %}
 
 {% unless request.design_mode %}

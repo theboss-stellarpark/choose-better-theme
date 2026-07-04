@@ -25,6 +25,21 @@
           {%- endif -%}
         </div>
       {%- endif -%}
+      {%- for tag in product.tags -%}
+        {%- assign tag_lower = tag | downcase -%}
+        {%- if tag_lower contains 'badge:' -%}
+          {%- assign cb_text = tag | slice: 6, 100 | strip -%}
+          {%- assign cb_key = cb_text | downcase -%}
+          {%- if cb_key == 'new' -%}
+            {%- assign cb_class = 'product-badges__badge--tag-new' -%}
+          {%- elsif cb_key == 'hot' -%}
+            {%- assign cb_class = 'product-badges__badge--tag-hot' -%}
+          {%- else -%}
+            {%- assign cb_class = 'product-badges__badge--tag-custom' -%}
+          {%- endif -%}
+          <div class="product-badges__badge product-badges__badge--rectangle product-badges__badge--tag {{ cb_class }}">{{ cb_text }}</div>
+        {%- endif -%}
+      {%- endfor -%}
     </div>
     {%  if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add', product: product, section_id: section.id %}

@@ -228,6 +228,13 @@
                   {% render 'cart-products' %}
                 </scroll-hint>
 
+                {%- assign cart_notice_text = shop.metafields.custom.cart_notice_text | strip -%}
+                {%- if shop.metafields.custom.cart_notice_active == true and cart_notice_text != blank -%}
+                  <div class="cart-notice cart-notice--drawer">
+                    <p class="cart-notice__text">{{ cart_notice_text }}</p>
+                  </div>
+                {%- endif -%}
+
                 <div
                   class="cart-drawer__summary"
                 >
@@ -323,6 +330,15 @@
 
   .account-button--text shopify-account {
     color: inherit;
+  }
+
+  .cart-notice--drawer {
+    margin-inline: var(--padding-xl);
+    margin-block: var(--padding-md);
+
+    @media screen and (min-width: 750px) {
+      margin-inline: var(--padding-2xl);
+    }
   }
 
   .cart-drawer {

@@ -48,4 +48,33 @@
     padding-block: var(--badge-rectangle-padding-block);
     padding-inline: var(--badge-rectangle-padding-inline);
   }
+
+  /* Tag-based custom badges */
+  .product-badges__badge--tag {
+    max-width: 110px;
+    white-space: normal;
+    line-height: 1.3;
+    margin-block-start: 4px;
+  }
+
+  .product-badges__badge:first-child.product-badges__badge--tag {
+    margin-block-start: 0;
+  }
+
+  .product-badges__badge--tag-new {
+    background: #c2a35d;
+    color: #1c2a39;
+  }
+
+  .product-badges__badge--tag-hot {
+    background: #b03a2e;
+    color: #ffffff;
+  }
+
+  .product-badges__badge--tag-custom {
+    background: #1c2a39;
+    color: #ffffff;
+    text-transform: none;
+    font-size: 0.6rem;
+  }
 {% endstylesheet %}

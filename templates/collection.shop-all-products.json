@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -56,7 +65,10 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_title", "text_desc"],
+      "block_order": [
+        "text_title",
+        "text_desc"
+      ],
       "name": "Banner",
       "settings": {
         "content_direction": "column",
@@ -73,6 +85,7 @@
         "color_scheme": "scheme-navy-header",
         "background_media": "image",
         "video_position": "cover",
+        "background_image": "shopify://shop_images/hero_banner_-_coffee_shop.png",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
@@ -169,21 +182,22 @@
               "blocks": {}
             }
           },
-          "block_order": ["card-gallery", "product_title", "price"]
+          "block_order": [
+            "card-gallery",
+            "product_title",
+            "price"
+          ]
         }
       },
       "settings": {
-        "layout_type": "grid",
-        "product_card_size": "large",
-        "mobile_product_card_size": "large",
-        "product_grid_width": "centered",
-        "columns_gap_horizontal": 16,
-        "columns_gap_vertical": 24,
         "color_scheme": "scheme-1",
         "padding-block-start": 48,
         "padding-block-end": 48
       }
     }
   },
-  "order": ["banner", "grouped_products"]
+  "order": [
+    "banner",
+    "grouped_products"
+  ]
 }

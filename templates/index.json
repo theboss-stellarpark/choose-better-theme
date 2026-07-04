@@ -12,81 +12,10 @@
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
-        "text_dm3FQE": {
-          "type": "text",
-          "name": "t:names.text",
+        "hero_text_panel": {
+          "type": "custom-liquid",
           "settings": {
-            "text": "<p>WE'RE ALL IN THIS TOGETHER</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.875rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "#c2a35d",
-            "background": false,
-            "background_color": "#f3efe7cc",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Different paths.<br/>Common ground.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "tight",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#f3efe7cc",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_JyXdXz": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Apparel that reminds us of what really matters.</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1.125rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#f3efe7cc",
-            "corner_radius": 0,
-            "padding-block-start": 20,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "custom_liquid": "<div class=\"hero-text-panel\"><p class=\"hero-text-panel__eyebrow\">POSITIVE CHOICES. BETTER TOMORROWS.<\/p><p class=\"hero-text-panel__heading\">Clothing for a<br>better today.<\/p><p class=\"hero-text-panel__body\">Thoughtful designs that inspire growth, connection, and everyday progress.<\/p><\/div><style>.hero-text-panel{display:inline-block;background-color:rgba(15,26,38,0.4);border-radius:6px;padding:20px 24px;max-width:380px}.hero-text-panel__eyebrow{font-family:var(--font-subheading--family);font-size:0.875rem;color:#c2a35d;margin:0 0 8px 0;line-height:1.4}.hero-text-panel__heading{font-family:var(--font-heading--family);font-size:var(--font-h2--size,2rem);line-height:var(--font-h2--line-height,1.2);color:#ffffff;margin:0 0 12px 0}.hero-text-panel__body{font-family:var(--font-body--family);font-size:1.125rem;color:#ffffff;line-height:1.6;margin:0}<\/style>"
           },
           "blocks": {}
         },
@@ -121,16 +50,14 @@
         }
       },
       "block_order": [
-        "text_dm3FQE",
-        "text_YLPk4p",
-        "text_JyXdXz",
+        "hero_text_panel",
         "spacer_Y6jCkf",
         "button_H9gpTf"
       ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/homepagebannertall.jpg",
+        "image_1": "shopify://shop_images/couple_hero_banner-cropped.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -148,7 +75,7 @@
         "gap": 8,
         "section_width": "page-width",
         "section_height": "custom",
-        "section_height_custom": 65,
+        "section_height_custom": 85,
         "color_scheme": "scheme-1",
         "toggle_overlay": true,
         "overlay_color": "rgba(0,0,0,0)",
@@ -929,7 +856,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/ChatGPT_Image_May_27_2026_07_55_23_AM.png",
+            "image": "shopify://shop_images/coffe_shop_table_forward_together_better_everyday.png",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -1074,7 +1001,7 @@
               "type": "button",
               "settings": {
                 "label": "LEARN MORE",
-                "link": "/pages/about-us",
+                "link": "/pages/about",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",

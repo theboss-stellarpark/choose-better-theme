@@ -1,5 +1,6 @@
 {% comment %}
-  Renders a size chart table based on a product tag matching "size-chart:[key]".
+  Renders a size chart accordion based on a product tag matching "size-chart:[key]".
+  Outputs nothing if no matching tag exists.
   Usage: {% render 'size-chart', product: product %}
   To add a new chart: add a {% when '[key]' %} block and tag products "size-chart:[key]".
 {% endcomment %}
@@ -13,7 +14,7 @@
 {% endfor %}
 
 {% if size_chart_key != blank %}
-  <div class="size-chart">
+  {% capture size_chart_table %}
     {% case size_chart_key %}
 
       {% when 'premium-hoodie' %}
@@ -54,8 +55,94 @@
           </tbody>
         </table>
 
+      {% when 'quarter-zip' %}
+        <table class="size-chart__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>LENGTH (inches)</th>
+              <th>CHEST (inches)</th>
+              <th>SLEEVE LENGTH (inches)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>XS</td><td>27</td><td>19</td><td>34 ¼</td></tr>
+            <tr><td>S</td><td>28</td><td>20 ½</td><td>35</td></tr>
+            <tr><td>M</td><td>29</td><td>22</td><td>35 ¾</td></tr>
+            <tr><td>L</td><td>30</td><td>23 ½</td><td>36 ½</td></tr>
+            <tr><td>XL</td><td>31</td><td>25</td><td>37 ¼</td></tr>
+            <tr><td>2XL</td><td>32</td><td>26 ½</td><td>38</td></tr>
+            <tr><td>3XL</td><td>32 ½</td><td>28 ½</td><td>38 ¾</td></tr>
+            <tr><td>4XL</td><td>33</td><td>30 ½</td><td>39 ½</td></tr>
+          </tbody>
+        </table>
+
+      {% when 'long-sleeve' %}
+        <table class="size-chart__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>SHIRT LENGTH (inches)</th>
+              <th>CHEST WIDTH (inches)</th>
+              <th>CHEST TO FIT (inches)</th>
+              <th>SLEEVE LENGTH (inches)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>XS</td><td>27</td><td>16 ½</td><td>31-34</td><td>25</td></tr>
+            <tr><td>S</td><td>28</td><td>18</td><td>34-37</td><td>25 ⅝</td></tr>
+            <tr><td>M</td><td>29</td><td>20</td><td>38-41</td><td>26 ¼</td></tr>
+            <tr><td>L</td><td>30</td><td>22</td><td>42-45</td><td>26 ⅞</td></tr>
+            <tr><td>XL</td><td>31</td><td>24</td><td>46-49</td><td>27 ½</td></tr>
+            <tr><td>2XL</td><td>32</td><td>26</td><td>50-53</td><td>28 ⅛</td></tr>
+          </tbody>
+        </table>
+
+      {% when 'unstructured-hat' %}
+        <table class="size-chart__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>A (inches)</th>
+              <th>B (inches)</th>
+              <th>C (inches)</th>
+              <th>D (inches)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>One size</td><td>20 ½-24 ⅜</td><td>4 ¾</td><td>3 ⅛</td><td>7 ½</td></tr>
+          </tbody>
+        </table>
+
     {% endcase %}
-  </div>
+  {% endcapture %}
+
+  {% if size_chart_table != blank %}
+    {% capture accordion_children %}
+      <details class="details" data-testid="accordion-details">
+        <summary class="details__header">
+          Size Chart
+          <span class="svg-wrapper icon-caret icon-animated">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+          <span class="svg-wrapper icon-plus">
+            {{- 'icon-plus.svg' | inline_asset_content -}}
+          </span>
+        </summary>
+        <div class="details-content">
+          {{ size_chart_table }}
+        </div>
+      </details>
+    {% endcapture %}
+
+    <div class="accordion accordion--icon-none border-style spacing-style">
+      {% render 'accordion-custom-component',
+        children: accordion_children,
+        open_by_default_on_desktop: false,
+        open_by_default_on_mobile: false
+      %}
+    </div>
+  {% endif %}
 {% endif %}
 
 {% stylesheet %}
