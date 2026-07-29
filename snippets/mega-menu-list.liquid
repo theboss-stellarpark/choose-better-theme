@@ -129,7 +129,13 @@
             -%}
           {%- endcapture -%}
 
-          {% render 'link-featured-image', link: link, class: 'mega-menu__link-image', sizes: collection_image_sizes %}
+          {%- assign nav_img = link.object.featured_image -%}
+          {%- if nav_img and nav_img.width > nav_img.height -%}
+            {%- assign nav_img_sizes = '(min-width: 990px) 800px, 600px' -%}
+          {%- else -%}
+            {%- assign nav_img_sizes = collection_image_sizes -%}
+          {%- endif -%}
+          {% render 'link-featured-image', link: link, class: 'mega-menu__link-image', sizes: nav_img_sizes %}
         {% endif %}
         <span class="wrap-text">
           {{- link.title -}}

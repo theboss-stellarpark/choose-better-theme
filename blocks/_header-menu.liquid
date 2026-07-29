@@ -190,6 +190,11 @@
   .header__underlay {
     --color-submenu: rgb({{ block_settings.color_scheme.settings.background.rgba }});
   }
+  @media screen and (max-width: 749px) {
+    .mega-menu__link-image {
+      aspect-ratio: 9 / 16;
+    }
+  }
 {% endstyle %}
 {% stylesheet %}
   .header__drawer {
@@ -549,10 +554,16 @@
   .mega-menu__link-image {
     width: 100%;
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 4;
     margin-bottom: var(--padding-sm);
     object-fit: cover;
     border-radius: var(--menu-image-border-radius);
+  }
+
+  @media screen and (max-width: 749px) {
+    .mega-menu__link-image {
+      aspect-ratio: 9 / 16;
+    }
   }
 
   /* Fix alignment for collection image mode links without images */
@@ -575,7 +586,7 @@
     content: '';
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 4;
     margin-bottom: var(--padding-sm);
     background-color: var(--color-foreground-muted);
     opacity: 0.1;

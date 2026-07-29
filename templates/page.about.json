@@ -155,13 +155,13 @@
                 "story_label": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>ABOUT US</p>",
+                    "text": "<p>OUR STORY</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "custom",
                     "font": "var(--font-subheading--family)",
-                    "font_size": "0.875rem",
+                    "font_size": "1.125rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "uppercase",
@@ -184,12 +184,12 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2",
+                    "type_preset": "custom",
                     "font": "var(--font-heading--family)",
-                    "font_size": "1rem",
+                    "font_size": "1.5rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
-                    "case": "none",
+                    "case": "uppercase",
                     "wrap": "pretty",
                     "color": "var(--color-foreground)",
                     "background": false,
@@ -212,7 +212,7 @@
                 "story_body": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Choose Better was built on a simple belief: in a world that can feel increasingly divided, respect, optimism, and intentional living still matter.</p><p>Different paths. Common ground.</p><p>We create apparel that reflects those values: thoughtful design, quality essentials, and messages that encourage a more connected and intentional way of moving through everyday life.</p>",
+                    "text": "<p>This started with me wanting to be better. Not a brand. Not a product. Just a personal need to shift how I was moving through the world.</p><p>I wasn't naturally good at it. I'm not someone who defaults to optimism or sees the best in people right away. If I'm honest, my patience was running thin — with the world, with people who saw things differently, with the noise of it all. So I built a mental framework — an Everyday Mindset — to help myself get there. Something I could come back to when it was hard. Growth first. Then Respect. Then Common Ground.</p><p>At some point I realized: when you put on a piece of clothing, it changes how you carry yourself. Think about a uniform — it doesn't just signal who you are to other people, it signals it to you. It shifts your mindset before you even walk out the door. That's what Choose Better became. A reminder you wear — which meant the product itself had to earn that role. Crafted to be worn every day, not just bought once.</p><p>One thing you won't find here: any attempt to tell you what to believe, how to think, or who to be. Choose Better isn't about changing people — it's about understanding them. Appreciating that we come from different places, different experiences, different perspectives. The goal isn't to pull everyone onto your path. It's to recognize the ground you're already sharing.</p><p>If that resonates, this was built for you.</p>",
                     "width": "100%",
                     "max_width": "full",
                     "alignment": "left",
@@ -233,7 +233,7 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
+                }
               },
               "block_order": ["story_label", "story_heading", "story_line", "story_body"]
             }
@@ -253,43 +253,523 @@
         "padding-block-end": 0
       }
     },
-    "about_philosophy": {
-      "type": "section",
+    "about_growth": {
+      "type": "media-with-content",
       "blocks": {
-        "philo_label": {
-          "type": "text",
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
           "settings": {
-            "text": "<p>OUR PHILOSOPHY</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "custom",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.875rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "uppercase",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "media_type": "image",
+            "image": "shopify://shop_images/BETTER_EVERYDAY_Lifestyle_1.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
           },
           "blocks": {}
         },
-        "philo_row": {
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 0
+          },
+          "blocks": {
+            "growth_group": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 24,
+                "padding-block-end": 48,
+                "padding-inline-start": 48,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "growth_label": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>01. Growth</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "1.125rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "#c2a35d",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "growth_heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Progress Over Perfection</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.5rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "pillar_img_pos": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<style>#shopify-section-about_growth img, #shopify-section-about_respect img, #shopify-section-about_common_ground img { object-position: top center !important; }</style>"
+                  },
+                  "blocks": {}
+                },
+                "growth_line": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<div style=\"width:48px;height:2px;background:#c2a35d;margin-block:8px;\"></div>"
+                  },
+                  "blocks": {}
+                },
+                "growth_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Growth isn't about any one decision. It's not a specific habit, a routine someone gave you, or a finish line to cross. It starts with something simpler: awareness.</p><p>Most of us already know what \"better\" looks like for us. We know the choices that move us forward and the ones that don't. Growth is the commitment to stay aware of that — to keep asking the question, especially when the answer is uncomfortable.</p><p>What that looks like is different for everyone. Choose Better isn't here to tell you what your growth should be. Personal growth is personal. But when we all carry the mindset of working toward it — in whatever form it takes — progress follows. Not all at once. Incrementally. Imperfectly. That's exactly how it's supposed to work.</p><p>Progress over perfection.</p><p>That's the idea behind the Better Everyday design — not a declaration of arrival, but a daily reminder of direction. A commitment to the next choice, and then the one after that.</p>",
+                    "width": "100%",
+                    "max_width": "full",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": ["pillar_img_pos", "growth_label", "growth_heading", "growth_line", "growth_body"]
+            }
+          },
+          "block_order": ["growth_group"]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "narrow",
+        "media_height": "auto",
+        "section_width": "page-width",
+        "extend_media": true,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "about_respect": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/RESPECT_MATTERS_Lifestyle_2.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 0
+          },
+          "blocks": {
+            "respect_group": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 24,
+                "padding-block-end": 48,
+                "padding-inline-start": 0,
+                "padding-inline-end": 48
+              },
+              "blocks": {
+                "respect_label": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>02. Respect</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "1.125rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "#c2a35d",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "respect_heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Mutual Respect</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.5rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "respect_line": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<div style=\"width:48px;height:2px;background:#c2a35d;margin-block:8px;\"></div>"
+                  },
+                  "blocks": {}
+                },
+                "respect_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Respect is the bridge between Growth and Common Ground — and without it, neither one means anything. Relationships fail without it. Progress stalls. It doesn't matter how much personal growth you've done if it doesn't translate into how you treat the people around you.</p><p>But even more than respect, what really moves things forward is mutual respect. And that's where most of us get stuck.</p><p>It's easy to feel like we've already done our part. We've been patient. We've tried. And when things still don't improve, it's tempting to see the other side's lack of respect as the problem.</p><p>The shift Choose Better asks for is simpler than that — and harder. Focus only on what you can control: your own choices. Your own response. Your own willingness to extend respect, even when it doesn't feel deserved.</p><p>When everyone starts there, mutual respect becomes possible. And mutual respect is the only kind that actually creates progress.</p><p>That's what the Respect Matters design is built on — not a declaration, but a daily practice. A quiet anchor in a world that often rewards noise over grace.</p>",
+                    "width": "100%",
+                    "max_width": "full",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": ["respect_label", "respect_heading", "respect_line", "respect_body"]
+            }
+          },
+          "block_order": ["respect_group"]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "right",
+        "media_width": "narrow",
+        "media_height": "auto",
+        "section_width": "page-width",
+        "extend_media": true,
+        "color_scheme": "scheme-white",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "about_common_ground": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/COMMON_GROUND_Lifestyle_2.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 0
+          },
+          "blocks": {
+            "cg_group": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 24,
+                "padding-block-end": 48,
+                "padding-inline-start": 48,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "cg_label": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>03. Common Ground</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "1.125rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "#c2a35d",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "cg_heading": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A More Aware Way to Live</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.5rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "cg_line": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<div style=\"width:48px;height:2px;background:#c2a35d;margin-block:8px;\"></div>"
+                  },
+                  "blocks": {}
+                },
+                "cg_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Common Ground is where everything comes together. It's what the whole Everyday Mindset points toward — and the thing that actually builds relationships, not just maintains them.</p><p>Growth helps you look inward. Respect creates a foundation. But Common Ground goes deeper than both. You can do the personal work and still remain distant. You can hold silent respect for someone and never truly connect. Common Ground is what closes that gap — the recognition that beneath all the differences, the humanity is the same.</p><p>Without it, we stay stuck. The stalemate of our differences doesn't resolve on its own. It takes the active choice to look past what divides us and acknowledge what we already share — and then to build on that, together.</p><p>But Common Ground isn't only about moving forward. It's also just a more aware way to live. Recognizing that the person across from you — whoever they are, wherever they come from — is navigating the same fundamental things: the need to feel safe, to find meaning, to be seen.</p><p>That's what the Common Ground and Forward Together designs are rooted in. Not a call to agree on everything. A call to recognize what was already there.</p>",
+                    "width": "100%",
+                    "max_width": "full",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": ["cg_label", "cg_heading", "cg_line", "cg_body"]
+            }
+          },
+          "block_order": ["cg_group"]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "narrow",
+        "media_height": "auto",
+        "section_width": "page-width",
+        "extend_media": true,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "about_quality": {
+      "type": "section",
+      "blocks": {
+        "quality_group": {
           "type": "group",
           "settings": {
-            "content_direction": "row",
+            "content_direction": "column",
             "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "flex-start",
             "gap": 16,
             "width": "fill",
@@ -314,306 +794,84 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 24,
+            "padding-inline-end": 24
           },
           "blocks": {
-            "philo_respect": {
-              "type": "group",
+            "quality_icon": {
+              "type": "custom-liquid",
               "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "flex-start",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 16,
-                "padding-block-end": 16,
-                "padding-inline-start": 20,
-                "padding-inline-end": 20
+                "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#c2a35d\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z\"/></svg></div>"
               },
-              "blocks": {
-                "icon_respect": {
-                  "type": "icon",
-                  "settings": { "icon": "silhouette", "width": 36, "icon_color": "#c2a35d", "link": "", "open_in_new_tab": false },
-                  "blocks": {}
-                },
-                "title_respect": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>RESPECT</p>",
-                    "width": "fit-content", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.875rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 4, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_respect": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Respect creates stronger communities.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["icon_respect", "title_respect", "desc_respect"]
-            },
-            "philo_optimism": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 16, "padding-block-end": 16, "padding-inline-start": 20, "padding-inline-end": 20
-              },
-              "blocks": {
-                "icon_optimism": {
-                  "type": "icon",
-                  "settings": { "icon": "fire", "width": 36, "icon_color": "#c2a35d", "link": "", "open_in_new_tab": false },
-                  "blocks": {}
-                },
-                "title_optimism": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>OPTIMISM</p>",
-                    "width": "fit-content", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.875rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 4, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_optimism": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Progress starts with believing better is possible.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["icon_optimism", "title_optimism", "desc_optimism"]
-            },
-            "philo_intent": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 16, "padding-block-end": 16, "padding-inline-start": 20, "padding-inline-end": 20
-              },
-              "blocks": {
-                "icon_intent": {
-                  "type": "icon",
-                  "settings": { "icon": "leaf", "width": 36, "icon_color": "#c2a35d", "link": "", "open_in_new_tab": false },
-                  "blocks": {}
-                },
-                "title_intent": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>INTENTIONALITY</p>",
-                    "width": "fit-content", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.875rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 4, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_intent": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Small choices shape our daily lives.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["icon_intent", "title_intent", "desc_intent"]
-            },
-            "philo_common": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 16, "padding-block-end": 16, "padding-inline-start": 20, "padding-inline-end": 20
-              },
-              "blocks": {
-                "icon_common": {
-                  "type": "icon",
-                  "settings": { "icon": "heart", "width": 36, "icon_color": "#c2a35d", "link": "", "open_in_new_tab": false },
-                  "blocks": {}
-                },
-                "title_common": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>COMMON GROUND</p>",
-                    "width": "fit-content", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.875rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 4, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_common": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Different paths. Shared humanity.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["icon_common", "title_common", "desc_common"]
-            },
-            "philo_div1": {
-              "type": "_divider",
-              "settings": { "thickness": 1, "corner_radius": "square", "width_percent": 100, "padding-block-start": 0, "padding-block-end": 0 },
               "blocks": {}
             },
-            "philo_div2": {
-              "type": "_divider",
-              "settings": { "thickness": 1, "corner_radius": "square", "width_percent": 100, "padding-block-start": 0, "padding-block-end": 0 },
-              "blocks": {}
-            },
-            "philo_div3": {
-              "type": "_divider",
-              "settings": { "thickness": 1, "corner_radius": "square", "width_percent": 100, "padding-block-start": 0, "padding-block-end": 0 },
-              "blocks": {}
-            },
-            "philo_div4": {
-              "type": "_divider",
-              "settings": { "thickness": 1, "corner_radius": "square", "width_percent": 100, "padding-block-start": 0, "padding-block-end": 0 },
-              "blocks": {}
-            },
-            "philo_progress": {
-              "type": "group",
+            "quality_heading": {
+              "type": "text",
               "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 16, "padding-block-end": 16, "padding-inline-start": 20, "padding-inline-end": 20
+                "text": "<p>Every piece is built to the same standard as the mindset behind it.</p>",
+                "width": "100%",
+                "max_width": "full",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_size": "1.375rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
-              "blocks": {
-                "icon_progress": {
-                  "type": "icon",
-                  "settings": { "icon": "star", "width": 36, "icon_color": "#c2a35d", "link": "", "open_in_new_tab": false },
-                  "blocks": {}
-                },
-                "title_progress": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>PROGRESS</p>",
-                    "width": "fit-content", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.875rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 4, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_progress": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Progress matters more than perfection.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
+              "blocks": {}
+            },
+            "quality_values": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Crafted with purpose &nbsp;&middot;&nbsp; Quality you can feel &nbsp;&middot;&nbsp; Built to last</p>",
+                "width": "100%",
+                "max_width": "full",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "#c2a35d",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
-              "block_order": ["icon_progress", "title_progress", "desc_progress"]
+              "blocks": {}
             }
           },
-          "block_order": ["philo_respect", "philo_div1", "philo_optimism", "philo_div2", "philo_intent", "philo_div3", "philo_common", "philo_div4", "philo_progress"]
+          "block_order": ["quality_icon", "quality_heading", "quality_values"]
         }
       },
-      "block_order": ["philo_label", "philo_row"],
+      "block_order": ["quality_group"],
       "settings": {
         "section_width": "page-width",
         "content_direction": "column",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "flex-start",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "flex-start",
-        "gap": 40,
+        "gap": 0,
         "color_scheme": "scheme-white",
         "background_media": "none",
         "video_position": "cover",
@@ -624,226 +882,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 64,
-        "padding-block-end": 64
-      }
-    },
-    "about_everyday": {
-      "type": "section",
-      "blocks": {
-        "every_label": {
-          "type": "text",
-          "settings": {
-            "text": "<p>DESIGNED FOR EVERYDAY LIFE</p>",
-            "width": "fit-content", "max_width": "normal", "alignment": "center",
-            "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "1.25rem",
-            "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-            "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-            "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "every_row": {
-          "type": "group",
-          "settings": {
-            "content_direction": "row", "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start", "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 24, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-            "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-            "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-            "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-            "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-            "link": "", "open_in_new_tab": false, "placeholder": "",
-            "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-          },
-          "blocks": {
-            "card_premium": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-              },
-              "blocks": {
-                "img_premium": {
-                  "type": "image",
-                  "settings": {
-                    "image": "shopify://shop_images/navy_fabric_clean.png",
-                    "link": "", "image_ratio": "landscape", "width": "fill", "custom_width": 100,
-                    "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                    "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                    "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "title_premium": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>PREMIUM GARMENTS</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "1.25rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 8, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_premium": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Quality fabrics selected for comfort and longevity.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 80, "padding-inline-end": 80
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["img_premium", "title_premium", "desc_premium"]
-            },
-            "card_design": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-              },
-              "blocks": {
-                "img_design": {
-                  "type": "image",
-                  "settings": {
-                    "image": "shopify://shop_images/CB_Embroidered_Logo_Updated.jpg",
-                    "link": "", "image_ratio": "landscape", "width": "fill", "custom_width": 100,
-                    "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                    "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                    "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "title_design": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>THOUGHTFUL DESIGN</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "1.25rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 8, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_design": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Minimal graphics. Meaningful details.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 80, "padding-inline-end": 80
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["img_design", "title_design", "desc_design"]
-            },
-            "card_wear": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column", "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-                "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-                "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-                "link": "", "open_in_new_tab": false, "placeholder": "",
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-              },
-              "blocks": {
-                "img_wear": {
-                  "type": "image",
-                  "settings": {
-                    "image": "shopify://shop_images/about_us_design_image_3.png",
-                    "link": "", "image_ratio": "landscape", "width": "fill", "custom_width": 100,
-                    "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                    "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                    "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "title_wear": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>EVERYDAY WEARABILITY</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "1.25rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "uppercase", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 8, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "desc_wear": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Built to fit naturally into daily life.</p>",
-                    "width": "100%", "max_width": "normal", "alignment": "center",
-                    "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "1.125rem",
-                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty",
-                    "color": "var(--color-foreground)", "background": false, "background_color": "#00000026",
-                    "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 96, "padding-inline-end": 96
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["img_wear", "title_wear", "desc_wear"]
-            }
-          },
-          "block_order": ["card_premium", "card_design", "card_wear"]
-        }
-      },
-      "block_order": ["every_label", "every_row"],
-      "settings": {
-        "section_width": "page-width",
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "flex-start",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-start",
-        "gap": 16,
-        "color_scheme": "scheme-2",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "section_height": "",
-        "section_height_custom": 100,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 16,
-        "padding-block-end": 24
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "about_forward": {
@@ -974,7 +1014,7 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
+                    }
                   },
                   "block_order": ["fwd_heading"]
                 },
@@ -1020,7 +1060,7 @@
                     "fwd_body": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We may come from different places.<br>We may hold different perspectives.<br>We may walk different paths.</p><p>But respect, optimism, and understanding create more common ground than we often realize.</p>",
+                        "text": "<p>We may come from different places.<br>We may hold different perspectives.<br>We may walk different paths.</p><p>But optimism, respect, and understanding create more common ground than we often realize.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1095,26 +1135,61 @@
         "grid_group": {
           "type": "group",
           "settings": {
-            "content_direction": "row", "vertical_on_mobile": false,
-            "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start", "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 0, "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100,
-            "height": "fit", "custom_height": 100, "inherit_color_scheme": true, "color_scheme": "",
-            "background_media": "none", "video_position": "cover", "background_image_position": "cover",
-            "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-            "toggle_overlay": false, "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top",
-            "link": "", "open_in_new_tab": false, "placeholder": "",
-            "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 0,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "grid_1": {
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/about_us_bottom_1.png",
-                "link": "", "image_ratio": "square", "width": "fill", "custom_width": 100,
-                "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -1122,10 +1197,21 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/about_us_bottom_2.png",
-                "link": "", "image_ratio": "square", "width": "fill", "custom_width": 100,
-                "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -1133,10 +1219,21 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/about_us_bottom_3.png",
-                "link": "", "image_ratio": "square", "width": "fill", "custom_width": 100,
-                "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -1144,10 +1241,21 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/about_us_bottom_4.png",
-                "link": "", "image_ratio": "square", "width": "fill", "custom_width": 100,
-                "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -1155,10 +1263,21 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/about_us_bottom_5.png",
-                "link": "", "image_ratio": "square", "width": "fill", "custom_width": 100,
-                "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -1166,10 +1285,21 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/about_us_bottom_6.png",
-                "link": "", "image_ratio": "square", "width": "fill", "custom_width": 100,
-                "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit",
-                "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0,
-                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             }
@@ -1203,5 +1333,5 @@
       }
     }
   },
-  "order": ["about_hero", "about_story", "about_philosophy", "about_everyday", "about_forward", "about_grid"]
+  "order": ["about_hero", "about_story", "about_growth", "about_respect", "about_common_ground", "about_quality", "about_forward", "about_grid"]
 }

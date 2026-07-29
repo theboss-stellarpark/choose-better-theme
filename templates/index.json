@@ -15,7 +15,7 @@
         "hero_text_panel": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"hero-text-panel\"><p class=\"hero-text-panel__eyebrow\">POSITIVE CHOICES. BETTER TOMORROWS.<\/p><p class=\"hero-text-panel__heading\">Clothing for a<br>better today.<\/p><p class=\"hero-text-panel__body\">Thoughtful designs that inspire growth, connection, and everyday progress.<\/p><\/div><style>.hero-text-panel{display:inline-block;background-color:rgba(15,26,38,0.4);border-radius:6px;padding:20px 24px;max-width:380px}.hero-text-panel__eyebrow{font-family:var(--font-subheading--family);font-size:0.875rem;color:#c2a35d;margin:0 0 8px 0;line-height:1.4}.hero-text-panel__heading{font-family:var(--font-heading--family);font-size:var(--font-h2--size,2rem);line-height:var(--font-h2--line-height,1.2);color:#ffffff;margin:0 0 12px 0}.hero-text-panel__body{font-family:var(--font-body--family);font-size:1.125rem;color:#ffffff;line-height:1.6;margin:0}<\/style>"
+            "custom_liquid": "<div class=\"hero-text-panel\"><p class=\"hero-text-panel__principles\">Growth. Respect.<br>Common Ground.<\/p><div class=\"hero-text-panel__divider\"><\/div><p class=\"hero-text-panel__tagline\">Choose Better is an Everyday Mindset — a daily commitment to personal growth, respect for others, and to find the common ground that connects us all.<\/p><\/div><style>.hero-text-panel{display:inline-block;background-color:rgba(15,26,38,0.70);border-radius:6px;padding:28px 32px;max-width:540px}.hero-text-panel__principles{font-family:var(--font-heading--family);font-size:clamp(1.75rem,3vw,2.5rem);color:#c2a35d;margin:0 0 16px 0;line-height:1.2;letter-spacing:0.01em}.hero-text-panel__divider{width:48px;height:2px;background:#c2a35d;margin:0 0 16px 0;opacity:0.7}.hero-text-panel__tagline{font-family:var(--font-body--family);font-size:1rem;color:rgba(255,255,255,0.9);line-height:1.7;margin:0}@media(max-width:749px){.hero-text-panel{max-width:100%;padding:20px}.hero-text-panel__principles{font-size:1.5rem}}<\/style>"
           },
           "blocks": {}
         },
@@ -37,7 +37,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "SHOP COLLECTION",
+            "label": "SHOP THE MINDSET",
             "link": "shopify://collections/shop-all-products",
             "open_in_new_tab": false,
             "style_class": "button",
@@ -57,11 +57,12 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/couple_hero_banner-cropped.png",
+        "image_1": "shopify://shop_images/Home_Page_Banner_Everyday_Mindset.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
+        "custom_mobile_media": true,
         "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/Home_Page_Banner_Everyday_Mindset_Vertical.png",
         "media_type_2_mobile": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -78,13 +79,71 @@
         "section_height_custom": 85,
         "color_scheme": "scheme-1",
         "toggle_overlay": true,
-        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_color": "rgba(15,26,38,0.3)",
         "overlay_style": "gradient",
         "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 100,
         "padding-block-end": 72
+      }
+    },
+    "mindset_eyebrow": {
+      "type": "section",
+      "blocks": {
+        "eyebrow_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>THE EVERYDAY MINDSET</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.8125rem",
+            "line_height": "normal",
+            "letter_spacing": "0.12em",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "color": "#c2a35d",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["eyebrow_text"],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "flex-start",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 28,
+        "padding-block-end": 4
       }
     },
     "values_strip": {
@@ -143,7 +202,7 @@
             "title_unity": {
               "type": "text",
               "settings": {
-                "text": "<p>BUILT ON UNITY</p>",
+                "text": "<p>PERSONAL GROWTH</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -168,13 +227,13 @@
             "desc_unity": {
               "type": "text",
               "settings": {
-                "text": "<p>We're stronger when we choose each other.</p>",
+                "text": "<p>Be better than yesterday. Not perfect — just progress.</p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1.125rem",
+                "font_size": "0.875rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -261,7 +320,7 @@
             "title_inspire": {
               "type": "text",
               "settings": {
-                "text": "<p>MADE TO INSPIRE</p>",
+                "text": "<p>RESPECT OTHERS</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -286,13 +345,13 @@
             "desc_inspire": {
               "type": "text",
               "settings": {
-                "text": "<p>Thoughtful designs that spark connection.</p>",
+                "text": "<p>Real strength shows in how you treat people.</p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1.125rem",
+                "font_size": "0.875rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -368,7 +427,7 @@
             "icon_together": {
               "type": "icon",
               "settings": {
-                "icon": "shirt",
+                "icon": "leaf",
                 "width": 40,
                 "icon_color": "#c2a35d",
                 "link": "",
@@ -379,7 +438,7 @@
             "title_together": {
               "type": "text",
               "settings": {
-                "text": "<p>MORE THAN APPAREL</p>",
+                "text": "<p>COMMON GROUND</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -404,13 +463,13 @@
             "desc_together": {
               "type": "text",
               "settings": {
-                "text": "<p>Every design carries a message worth wearing.</p>",
+                "text": "<p>We're more alike than we are different.</p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1.125rem",
+                "font_size": "0.875rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -486,7 +545,7 @@
             "icon_quality": {
               "type": "icon",
               "settings": {
-                "icon": "leaf",
+                "icon": "shirt",
                 "width": 40,
                 "icon_color": "#c2a35d",
                 "link": "",
@@ -497,7 +556,7 @@
             "title_quality": {
               "type": "text",
               "settings": {
-                "text": "<p>QUALITY THAT LASTS</p>",
+                "text": "<p>CRAFTED WITH PURPOSE</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -522,13 +581,13 @@
             "desc_quality": {
               "type": "text",
               "settings": {
-                "text": "<p>Premium materials. Real comfort. Everyday durability.</p>",
+                "text": "<p>Quality you can feel, built to last.</p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1.125rem",
+                "font_size": "0.875rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -554,7 +613,7 @@
         "vsm_style": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<style>.section-content-wrapper>*:has(.vsm){display:none!important}@media(max-width:749px){.section-content-wrapper:has(.vsm){flex-direction:row!important;flex-wrap:wrap!important}.section-content-wrapper:has(.vsm)>.group-block{flex:0 0 50%!important;width:50%!important;padding-inline:16px!important;padding-block:24px!important}.section-content-wrapper:has(.vsm)>.divider{display:none!important}.section-content-wrapper:has(.vsm)>:nth-child(1),.section-content-wrapper:has(.vsm)>:nth-child(5){border-inline-end:1px solid rgba(139,143,148,.3)!important}.section-content-wrapper:has(.vsm)>:nth-child(1),.section-content-wrapper:has(.vsm)>:nth-child(3){border-block-end:1px solid rgba(139,143,148,.3)!important}}</style><span class=vsm style=display:none></span>"
+            "custom_liquid": "<style>.section-content-wrapper>*:has(.vsm){display:none!important}@media(max-width:749px){.section-content-wrapper:has(.vsm){flex-direction:row!important;flex-wrap:wrap!important}.section-content-wrapper:has(.vsm)>.group-block{flex:0 0 50%!important;width:50%!important;padding-inline:16px!important;padding-block:14px!important}.section-content-wrapper:has(.vsm)>.divider{display:none!important}.section-content-wrapper:has(.vsm)>:nth-child(1),.section-content-wrapper:has(.vsm)>:nth-child(5){border-inline-end:1px solid rgba(139,143,148,.3)!important}.section-content-wrapper:has(.vsm)>:nth-child(1),.section-content-wrapper:has(.vsm)>:nth-child(3){border-block-end:1px solid rgba(139,143,148,.3)!important}}</style><span class=vsm style=display:none></span>"
           },
           "blocks": {}
         }
@@ -593,6 +652,19 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
+        "padding-block-start": 8,
+        "padding-block-end": 32
+      }
+    },
+    "principle_collections": {
+      "type": "principle-collections",
+      "name": "Principle Collections",
+      "settings": {
+        "heading": "Shop by Principle",
+        "collection_1": "growth-collection",
+        "collection_2": "respect-collection",
+        "collection_3": "common-ground-collection",
+        "color_scheme": "scheme-1",
         "padding-block-start": 48,
         "padding-block-end": 48
       }
@@ -856,7 +928,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/coffe_shop_table_forward_together_better_everyday.png",
+            "image": "shopify://shop_images/Muted_Collection_Group_of_3_laughing.png",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -968,7 +1040,7 @@
                 "text_Drt46A": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Choose Better is a reminder that small choices shape a better future—for ourselves and each other.</p><p>It's about respect. Empathy. Growth.</p><p>It's about showing up, together.</p>",
+                    "text": "<p>Choose Better is a reminder that small choices shape a better future—for ourselves and each other.</p><p>It's about Growth. Respect. Common Ground.</p><p>It's about showing up, together.</p>",
                     "width": "100%",
                     "max_width": "narrow",
                     "alignment": "left",
@@ -1014,7 +1086,7 @@
             "cb_watermark": {
               "type": "custom-liquid",
               "settings": {
-                "custom_liquid": "<style>.media-with-content__content{position:relative;overflow:hidden;isolation:isolate}.cb-watermark-wrapper{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}.cb-watermark-img{position:absolute;right:calc(36% - 100px);top:50%;transform:translateY(-50%);width:420px;height:420px;object-fit:contain;opacity:0.08;}</style><div class=\"cb-watermark-wrapper\"><img class=\"cb-watermark-img\" src=\"https://cdn.shopify.com/s/files/1/0707/5384/5357/files/CHOOSE_BETTER_-_ROUND_CB_LOGO_GOLD_bbbca301-6aa9-4bb6-87a3-564a5eaaca70.png?v=1781320583\" alt=\"\" aria-hidden=\"true\"></div>"
+                "custom_liquid": "<style>.media-with-content__content{position:relative;overflow:hidden;isolation:isolate}.cb-watermark-wrapper{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}.cb-watermark-img{position:absolute;right:calc(36% - 100px);top:50%;transform:translateY(-50%);width:420px;height:420px;object-fit:contain;opacity:0.18;}</style><div class=\"cb-watermark-wrapper\"><img class=\"cb-watermark-img\" src=\"https://cdn.shopify.com/s/files/1/0707/5384/5357/files/CHOOSE_BETTER_-_ROUND_CB_LOGO_GOLD_bbbca301-6aa9-4bb6-87a3-564a5eaaca70.png?v=1781320583\" alt=\"\" aria-hidden=\"true\"></div>"
               },
               "blocks": {}
             }
@@ -1240,9 +1312,22 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "swatches": {
+              "type": "swatches",
+              "settings": {
+                "product_swatches_alignment": "center",
+                "product_swatches_alignment_mobile": "center",
+                "hide_padding": true,
+                "product_swatches_padding_top": 6,
+                "product_swatches_padding_bottom": 0,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
+              },
+              "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery", "product_title", "price"]
+          "block_order": ["product_card_gallery", "product_title", "price", "swatches"]
         }
       },
       "name": "Featured Products",
@@ -1250,7 +1335,7 @@
         "collection": "featured-products",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 6,
+        "max_products": 3,
         "columns": 3,
         "mobile_columns": "1",
         "columns_gap": 8,
@@ -1268,7 +1353,9 @@
   },
   "order": [
     "hero_jVaWmY",
+    "mindset_eyebrow",
     "values_strip",
+    "principle_collections",
     "product_list_fa6P9H",
     "media_with_content_Rr4PTY",
     "product_list_featured"
