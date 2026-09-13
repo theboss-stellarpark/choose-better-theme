@@ -1,0 +1,21 @@
+{% comment %}
+  Auto-selects the product's default variant on page load by updating the URL
+  with ?variant=<id> before Horizon's variant picker initializes.
+  The default_variant_id metafield is set by the merchandising script based on
+  the primary product image's associated color.
+  Falls back to Shopify's default (first variant) when the metafield is absent.
+{% endcomment %}
+
+{% if product.metafields.custom.default_variant_id %}
+  <script>
+    if (!location.search.includes('variant=')) {
+      history.replaceState(
+        {},
+        '',
+        location.pathname +
+          '?variant={{ product.metafields.custom.default_variant_id.value }}' +
+          location.hash
+      );
+    }
+  </script>
+{% endif %}

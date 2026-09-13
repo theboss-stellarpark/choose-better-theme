@@ -170,6 +170,13 @@
               },
               "blocks": {}
             },
+            "default_variant_selector": {
+              "type": "custom-liquid",
+              "settings": {
+                "custom_liquid": "{% render 'default-variant' %}"
+              },
+              "blocks": {}
+            },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
               "settings": {
@@ -261,6 +268,7 @@
           "block_order": [
             "group_icgrde",
             "divider_VJhene",
+            "default_variant_selector",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
             "shipping_notice",
