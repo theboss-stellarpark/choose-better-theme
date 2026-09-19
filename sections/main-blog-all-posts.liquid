@@ -1,0 +1,206 @@
+{% liquid
+  assign article_count = blog.articles.size
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
+<div
+  class="blog-all-posts section section--page-width spacing-style"
+  style="--padding-block-start: {{ section.settings['padding-block-start'] }}px; --padding-block-end: {{ section.settings['padding-block-end'] }}px;"
+>
+  <h1 class="blog-all-posts__title">{{ blog.title }}</h1>
+
+  {% if article_count > 0 %}
+    <nav id="contents" class="blog-all-posts__contents" aria-label="{{ 'content.jump_to_mindset' | t }}">
+      <ul class="blog-all-posts__contents-list" role="list">
+        {% for article in blog.articles %}
+          <li>
+            <a href="#{{ article.handle }}" class="blog-all-posts__chip">{{ article.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="blog-all-posts__list">
+      {% for article in blog.articles %}
+        <article
+          id="{{ article.handle }}"
+          class="blog-all-posts__post {% cycle 'blog-all-posts__post--default', 'blog-all-posts__post--reverse' %}"
+        >
+          <div class="blog-all-posts__post-text">
+            <h2 class="blog-all-posts__post-title">{{ article.title }}</h2>
+            <div class="blog-all-posts__post-content rte">
+              {{ article.content }}
+            </div>
+            <a href="#contents" class="blog-all-posts__back-to-top">{{ 'content.back_to_contents' | t }}</a>
+          </div>
+          {% if article.image %}
+            <div class="blog-all-posts__post-image">
+              {{ article.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 42vw, 100vw' }}
+            </div>
+          {% endif %}
+        </article>
+        {% unless forloop.last %}
+          <div class="blog-all-posts__divider"></div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{{ 'content.no_blog_posts' | t }}</p>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .blog-all-posts__title {
+    text-align: center;
+    margin-block-end: var(--margin-xl);
+  }
+
+  .blog-all-posts__contents {
+    margin-block-end: 64px;
+  }
+
+  .blog-all-posts__contents-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .blog-all-posts__chip {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #c2a35d;
+    border-radius: 999px;
+    font-family: var(--font-subheading--family);
+    font-size: 0.8125rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #c2a35d;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .blog-all-posts__chip:hover {
+    background-color: #c2a35d;
+    color: var(--color-background);
+  }
+
+  .blog-all-posts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .blog-all-posts__post {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 56px;
+    scroll-margin-top: 32px;
+  }
+
+  .blog-all-posts__post--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .blog-all-posts__post-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .blog-all-posts__post-title {
+    font-family: var(--font-heading--family);
+    font-size: 1.75rem;
+    margin-block-end: 20px;
+  }
+
+  .blog-all-posts__post-content {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .blog-all-posts__post-image {
+    width: 42%;
+    flex-shrink: 0;
+  }
+
+  .blog-all-posts__post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .blog-all-posts__divider {
+    height: 1px;
+    background-color: rgb(var(--color-border-rgb) / 0.25);
+  }
+
+  .blog-all-posts__back-to-top {
+    display: inline-block;
+    margin-block-start: 32px;
+    font-family: var(--font-subheading--family);
+    font-size: 0.8125rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #c2a35d;
+    text-decoration: none;
+  }
+
+  .blog-all-posts__back-to-top:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 749px) {
+    .blog-all-posts__post,
+    .blog-all-posts__post--reverse {
+      flex-direction: column;
+    }
+
+    .blog-all-posts__post-image {
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "All posts (jump nav)",
+  "enabled_on": {
+    "templates": ["blog"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 96,
+      "step": 8,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 96,
+      "step": 8,
+      "unit": "px",
+      "default": 48
+    }
+  ]
+}
+{% endschema %}

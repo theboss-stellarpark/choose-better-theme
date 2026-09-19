@@ -1,17 +1,28 @@
 {% comment %}
-  Renders a size chart accordion based on a product tag matching "size-chart:[key]".
+  Renders a size chart accordion based on a product tag matching "details_[key]".
+  Falls back to the legacy "size-chart:[key]" tag for products tagged before the
+  2026-09-17 rename — no need to retag existing products.
   Outputs nothing if no matching tag exists.
   Usage: {% render 'size-chart', product: product %}
-  To add a new chart: add a {% when '[key]' %} block and tag products "size-chart:[key]".
+  To add a new chart: add a {% when '[key]' %} block and tag products "details_[key]".
 {% endcomment %}
 
 {% assign size_chart_key = '' %}
 {% for tag in product.tags %}
-  {% if tag contains 'size-chart:' %}
-    {% assign size_chart_key = tag | remove: 'size-chart:' %}
+  {% if tag contains 'details_' %}
+    {% assign size_chart_key = tag | remove: 'details_' %}
     {% break %}
   {% endif %}
 {% endfor %}
+
+{% if size_chart_key == blank %}
+  {% for tag in product.tags %}
+    {% if tag contains 'size-chart:' %}
+      {% assign size_chart_key = tag | remove: 'size-chart:' %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 {% if size_chart_key != blank %}
   {% capture size_chart_table %}

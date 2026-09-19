@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-all-posts",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

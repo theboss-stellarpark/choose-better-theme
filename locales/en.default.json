@@ -160,6 +160,9 @@
     }
   },
   "content": {
+    "jump_to_mindset": "Jump to a mindset",
+    "back_to_contents": "Back to contents",
+    "no_blog_posts": "No stories yet — check back soon.",
     "cancel": "Cancel",
     "discount": "Discount",
     "account_title": "Account",
