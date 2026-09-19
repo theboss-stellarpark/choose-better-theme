@@ -2,6 +2,8 @@
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div class="section color-{{ section.settings.color_scheme }}">
+  {% render 'breadcrumbs' %}
+
   <div
     class="spacing-style section-content-wrapper blog-post-layout"
     style="{% render 'spacing-style', settings: section.settings %}"

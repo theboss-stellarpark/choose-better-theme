@@ -9,6 +9,7 @@
  */
 {
   "accessibility": {
+    "breadcrumb_label": "Breadcrumb",
     "account": "Account",
     "active_filters": "Active filters:",
     "cart": "Cart",
@@ -160,6 +161,8 @@
     }
   },
   "content": {
+    "breadcrumb_home": "Home",
+    "breadcrumb_shop": "Shop",
     "jump_to_mindset": "Jump to a mindset",
     "back_to_contents": "Back to contents",
     "no_blog_posts": "No stories yet — check back soon.",

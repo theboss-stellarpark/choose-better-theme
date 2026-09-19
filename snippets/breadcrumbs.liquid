@@ -1,0 +1,125 @@
+{% doc %}
+  Renders a breadcrumb trail (visible nav + BreadcrumbList structured data) based on the
+  current template. Supports product, collection, article, and page templates.
+
+  @example
+  {% render 'breadcrumbs' %}
+{% enddoc %}
+
+{% liquid
+  assign has_breadcrumbs = false
+  assign crumb1_name = blank
+  assign crumb1_url = blank
+  assign crumb2_name = blank
+  assign crumb2_url = blank
+  assign home_label = 'content.breadcrumb_home' | t
+
+  case template.name
+    when 'product'
+      assign has_breadcrumbs = true
+      assign crumb1_name = 'content.breadcrumb_shop' | t
+      assign crumb1_url = '/collections/all'
+      assign crumb2_name = product.title
+      assign crumb2_url = product.url
+
+    when 'collection'
+      assign has_breadcrumbs = true
+      assign crumb1_name = 'content.breadcrumb_shop' | t
+      assign crumb1_url = '/collections/all'
+      assign crumb2_name = collection.title
+      assign crumb2_url = collection.url
+
+    when 'article'
+      assign has_breadcrumbs = true
+      assign crumb1_name = blog.title
+      assign crumb1_url = blog.url
+      assign crumb2_name = article.title
+      assign crumb2_url = article.url
+
+    when 'page'
+      assign has_breadcrumbs = true
+      assign crumb2_name = page.title
+      assign crumb2_url = page.url
+  endcase
+%}
+
+{% if has_breadcrumbs %}
+  <nav class="breadcrumbs" aria-label="{{ 'accessibility.breadcrumb_label' | t }}">
+    <ol class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="{{ routes.root_url }}" class="breadcrumbs__link">{{ home_label }}</a>
+      </li>
+      {% if crumb1_name != blank %}
+        <li class="breadcrumbs__item">
+          <a href="{{ crumb1_url }}" class="breadcrumbs__link">{{ crumb1_name }}</a>
+        </li>
+      {% endif %}
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__current" aria-current="page">{{ crumb2_name }}</span>
+      </li>
+    </ol>
+  </nav>
+
+  {% capture ld_items %}
+    {"@type":"ListItem","position":1,"name":{{ home_label | json }},"item":{{ request.origin | append: routes.root_url | json }}}
+    {% if crumb1_name != blank %}
+      ,{"@type":"ListItem","position":2,"name":{{ crumb1_name | json }},"item":{{ request.origin | append: crumb1_url | json }}}
+      ,{"@type":"ListItem","position":3,"name":{{ crumb2_name | json }},"item":{{ request.origin | append: crumb2_url | json }}}
+    {% else %}
+      ,{"@type":"ListItem","position":2,"name":{{ crumb2_name | json }},"item":{{ request.origin | append: crumb2_url | json }}}
+    {% endif %}
+  {% endcapture %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{{ ld_items }}]
+    }
+  </script>
+{% endif %}
+
+{% stylesheet %}
+  .breadcrumbs {
+    max-width: var(--page-width);
+    margin-inline: auto;
+    padding-inline: var(--page-margin);
+    padding-block: 16px;
+    box-sizing: border-box;
+  }
+
+  .breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8125rem;
+  }
+
+  .breadcrumbs__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .breadcrumbs__item:not(:first-child)::before {
+    content: '/';
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+  }
+
+  .breadcrumbs__link {
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+    text-decoration: none;
+  }
+
+  .breadcrumbs__link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumbs__current {
+    color: var(--color-foreground);
+  }
+{% endstylesheet %}
