@@ -406,9 +406,34 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "growth_cta": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><a href=\"/collections/growth-collection\">Shop the Growth Collection &rarr;</a></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "#c2a35d",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 16,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["pillar_img_pos", "growth_label", "growth_heading", "growth_line", "growth_body"]
+              "block_order": ["pillar_img_pos", "growth_label", "growth_heading", "growth_line", "growth_body", "growth_cta"]
             }
           },
           "block_order": ["growth_group"]
@@ -572,9 +597,34 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "respect_cta": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><a href=\"/collections/respect-collection\">Shop the Respect Collection &rarr;</a></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "#c2a35d",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 16,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["respect_label", "respect_heading", "respect_line", "respect_body"]
+              "block_order": ["respect_label", "respect_heading", "respect_line", "respect_body", "respect_cta"]
             }
           },
           "block_order": ["respect_group"]
@@ -738,9 +788,34 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "cg_cta": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><a href=\"/collections/common-ground-collection\">Shop the Common Ground Collection &rarr;</a></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "#c2a35d",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 16,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["cg_label", "cg_heading", "cg_line", "cg_body"]
+              "block_order": ["cg_label", "cg_heading", "cg_line", "cg_body", "cg_cta"]
             }
           },
           "block_order": ["cg_group"]
