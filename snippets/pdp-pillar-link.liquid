@@ -1,0 +1,76 @@
+{% doc %}
+  Renders a "SHOP THE [PILLAR] COLLECTION" link with icon, based on which pillar
+  auto-collection (growth-collection / respect-collection / common-ground-collection) the
+  current product belongs to. Renders nothing if the product isn't in any of them.
+
+  @example
+  {% render 'pdp-pillar-link' %}
+{% enddoc %}
+
+{% liquid
+  assign pillar_handle = blank
+  assign pillar_label = blank
+  assign pillar_icon = blank
+  assign pillar_icon_width = 0
+
+  for collection in product.collections
+    case collection.handle
+      when 'growth-collection'
+        assign pillar_handle = collection.handle
+        assign pillar_label = 'Growth'
+        assign pillar_icon = 'icon-pillar-growth.png'
+        assign pillar_icon_width = 270
+        break
+      when 'respect-collection'
+        assign pillar_handle = collection.handle
+        assign pillar_label = 'Respect'
+        assign pillar_icon = 'icon-pillar-respect.png'
+        assign pillar_icon_width = 304
+        break
+      when 'common-ground-collection'
+        assign pillar_handle = collection.handle
+        assign pillar_label = 'Common Ground'
+        assign pillar_icon = 'icon-pillar-common-ground.png'
+        assign pillar_icon_width = 267
+        break
+    endcase
+  endfor
+%}
+
+{% if pillar_handle != blank %}
+  <a href="{{ routes.root_url }}collections/{{ pillar_handle }}" class="pdp-pillar-link">
+    <img
+      src="{{ pillar_icon | asset_url }}"
+      alt=""
+      loading="lazy"
+      width="{{ pillar_icon_width }}"
+      height="96"
+      class="pdp-pillar-link__icon"
+    >
+    <span>{{ 'content.shop_the_pillar_collection' | t: pillar: pillar_label | upcase }}</span>
+  </a>
+{% endif %}
+
+{% stylesheet %}
+  .pdp-pillar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-block-end: 14px;
+    font-family: var(--font-subheading--family);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #c2a35d;
+    text-decoration: none;
+  }
+
+  .pdp-pillar-link:hover {
+    text-decoration: underline;
+  }
+
+  .pdp-pillar-link__icon {
+    height: 28px;
+    width: auto;
+  }
+{% endstylesheet %}
