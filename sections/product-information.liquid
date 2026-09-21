@@ -179,6 +179,28 @@
 %}
 
 {% stylesheet %}
+  /* Scoped to the "Product description" text block's auto-generated id (text_aEtTtq in
+     templates/product.json) since that generic block type has no custom class hook. The
+     rendered class is actually prefixed with a section-instance hash (e.g.
+     text-block--AWDkwY1Y0Q2gxNHl0N__text_aEtTtq), confirmed via live HTML — hence the
+     substring match rather than an exact class name. Section headers in the
+     merchandise-script-generated description use <h4>, which otherwise renders at the full
+     24px theme heading size. */
+  [class*='text_aEtTtq'] h4 {
+    font-size: 18px;
+    color: #c2a35d;
+  }
+
+  /* The "Visual Concept" / "Layout & Execution" / "Aesthetic Intent" sub-headers inside the
+     design copy are <h5> — style as an eyebrow label (uppercase, letter-spaced) but kept the
+     default foreground color rather than gold, so it doesn't outweigh the h4 section headers
+     above it. */
+  [class*='text_aEtTtq'] h5 {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-block-start: 1.25em;
+  }
+
   .sticky-add-to-cart__bar {
     position: fixed;
     bottom: 20px;
